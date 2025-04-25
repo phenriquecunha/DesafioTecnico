@@ -28,5 +28,7 @@ public class ContaService {
                 .orElseThrow(() -> new NoSuchElementException("Conta não encontrada"));
     }
 
-
+    public Conta atualizarConta(Conta conta){
+        return this.contaRepository.save(conta);
+    }
 }
